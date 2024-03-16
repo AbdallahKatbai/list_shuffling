@@ -1,6 +1,7 @@
+
 import random
 
-my_list = ['1+1=', '1+2=', '1+3=', '1+4=', '1+5=', '1+6=', '1+7=', '1+8=', '1+9=',
+simple_addition = ['1+1=', '1+2=', '1+3=', '1+4=', '1+5=', '1+6=', '1+7=', '1+8=', '1+9=',
            '2+1=', '2+2=', '2+3=', '2+4=', '2+5=', '2+6=', '2+7=', '2+8=',
            '3+1=', '3+2=', '3+3=', '3+4=', '3+5=', '3+6=', '3+7=',
            '4+1=', '4+2=', '4+3=', '4+4=', '4+5=', '4+6=',
@@ -10,7 +11,15 @@ my_list = ['1+1=', '1+2=', '1+3=', '1+4=', '1+5=', '1+6=', '1+7=', '1+8=', '1+9=
            '8+1=', '8+2=',
            '9+1=']
 
-random.shuffle(my_list)
+random.shuffle(simple_addition)
 
-for i in range(len(my_list)):
-    print(my_list[i])
+
+def print_list(operations_list):
+    for i in range(len(operations_list)):
+        print(operations_list[i] + '.')
+
+def solve_list(operations_list):
+    for i in range(len(operations_list)):
+        print(operations_list[i] + str(eval(operations_list[i].rstrip('='))) + '.')
+
+solve_list(simple_addition)
