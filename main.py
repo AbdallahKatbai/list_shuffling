@@ -25,6 +25,7 @@ def print_list(operations_list):
     for i in range(len(operations_list)):
         print(operations_list[i] + '.')
 
+
 def solve_list(operations_list):
     for i in range(len(operations_list)):
         print(operations_list[i] + str(eval(operations_list[i].rstrip('='))) + '.')
@@ -38,5 +39,4 @@ def give_examples(operations_list):
     print('___________________')
 
 
-
-give_examples((simple_additions))
+give_examples(simple_additions)
